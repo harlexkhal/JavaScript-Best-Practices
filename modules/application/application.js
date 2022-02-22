@@ -37,12 +37,12 @@ class Application {
   }
 
   eventDispatcher = () => {
-    this.onclickeventDispatcher();
-    this.onsubmiteventDispatcher();
-    this.onediteventDispatcher();
+    this.onclickevent();
+    this.onsubmitevent();
+    this.oneditevent();
   }
 
-  onclickeventDispatcher = () => {
+  onclickevent = () => {
     // delete task
     const buttons = document.querySelectorAll('.delete');
     const ref = this;
@@ -98,7 +98,7 @@ class Application {
     clearBtn.ref = this;
   }
 
-  onsubmiteventDispatcher = () => {
+  onsubmitevent = () => {
     this.addTask.addEventListener('keyup', (event) => {
       if (event.keyCode !== 13) {
         return;
@@ -124,7 +124,7 @@ class Application {
     this.addTask.ref = this;
   }
 
-  onediteventDispatcher = () => {
+  oneditevent = () => {
     const ref = this;
     const listDesc = document.querySelectorAll('.desc');
     listDesc.forEach((desc, index) => {
@@ -165,6 +165,4 @@ class Application {
   }
 }
 
-/* eslint-disable */
 export { Application };
-/* eslint-enable */
